@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آزمون Django Framework</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="container">
+  <div id="startSection">
+    <h2>آزمون جامع Django Framework</h2>
+    <input id="firstName" placeholder="نام" required>
+    <input id="lastName" placeholder="نام خانوادگی" required>
+    <input id="nationalCode" placeholder="کد ملی" required>
+    <button onclick="startExam()">شروع آزمون</button>
+  </div>
+
+  <div id="examSection" style="display:none;">
+    <div id="timer">⏰ زمان باقی‌مانده: 33:00</div>
+    <div id="questionCounter"></div>
+    <h3 id="questionText"></h3>
+    <div id="options"></div>
+    <div style="margin-top: 20px; text-align: center;">
+      <button onclick="prevQuestion()">سؤال قبلی</button>
+      <button onclick="finishExam()" style="background-color: #dc3545; margin: 0 10px;">پایان آزمون</button>
+      <button onclick="nextQuestion()">سؤال بعدی</button>
+    </div>
+  </div>
+
+  <div id="resultSection" style="display:none;">
+    <h2>نتیجه آزمون</h2>
+    <div id="scoreDisplay"></div>
+    <div id="verifyBox"></div>
+    <div id="wrongQuestionsContainer"></div>
+    <button onclick="location.reload()" style="margin-top: 20px;">شرکت مجدد در آزمون</button>
+  </div>
+</div>
+
+<!-- ترتیب صحیح بارگذاری فایل‌های JavaScript -->
+<script src="js/db.js"></script>
+<script src="js/questions.js"></script>
+<script src="js/exam.js"></script>
+</body>
+  </html>
