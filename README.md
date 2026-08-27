@@ -1,50 +1,51 @@
-Django Framework Offline Exam Portal
-A lightweight, fully offline web application designed to conduct multiple-choice exams. This project was specifically developed for the Kharazmi Educational Center to evaluate students on the Django Framework. Built entirely with Vanilla JavaScript, it requires no backend server or internet connection to run.
+# Offline Exam Portal — LMS Assessment Module
 
-🌟 Key Features
-Fully Offline: The application runs entirely in the browser without needing an internet connection.
+A lightweight, fully offline assessment module built as part of a Learning 
+Management System (LMS) workflow, designed to conduct standardized 
+multiple-choice exams with zero dependency on internet connectivity or a 
+backend server. Developed for the Kharazmi Educational Center as a custom 
+evaluation tool within their learning platform — this instance was configured 
+to assess students on the Django Framework course, but the underlying 
+assessment engine is subject-agnostic and reusable for any course content.
 
-Automated Timer: Features a strict 33-minute timer that automatically ends the exam when the time is up.
+Built entirely with Vanilla JavaScript — no backend server or internet 
+connection required.
 
-Standardized Assessment: Contains 33 multiple-choice questions. Each question is valued at approximately 3.03 points out of a total score of 100.
+## 🌟 Key Features
 
-Responsive Design: Fully compatible with Desktop, Tablet, and Mobile devices.
+- **Fully Offline:** Runs entirely in the browser, with no internet connection needed — built for real classroom conditions where reliable connectivity can't be guaranteed.
+- **Automated Timer:** Strict 33-minute timer that automatically ends the exam when time is up.
+- **Standardized Assessment Engine:** Supports structured multiple-choice question sets (currently configured with 33 questions, ~3.03 points each, scored out of 100).
+- **One-Attempt Integrity Control:** Student registration via name and national ID ensures one attempt per candidate — critical for standardized evaluation.
+- **Responsive Design:** Fully compatible with desktop, tablet, and mobile devices.
+- **Cross-Browser Support:** Works seamlessly on Chrome, Firefox, Edge, and Safari.
+- **Instant Results:** Automatically calculates final score, correct-answer count, and time spent — no manual grading required.
 
-Cross-Browser Support: Works seamlessly on modern browsers including Chrome, Firefox, Edge, and Safari.
+## 📁 Project Structure
 
-Instant Results: Automatically calculates the final score out of 100, the total number of correct answers, and the exact time spent on the exam.
+Frontend-only architecture with no complex environment setup:
 
-📁 Project Structure
-Since this is a frontend-only Vanilla JS project, the architecture is straightforward and requires no complex environment setup:
+- `index.html` — main structure and user interface of the exam.
+- `style.css` — visual appearance and responsive layout.
+- `questions.js` — the question bank (currently 33 Django-related multiple-choice questions; swappable for any subject).
+- `db.js` — handles local data storage management.
+- `exam.js` — core assessment logic: timer, navigation, and scoring.
 
-index.html: The main structure and user interface of the exam.
+## 📋 Usage Instructions (For Students)
 
-style.css: The visual appearance and responsive layout of the application.
+1. **Registration:** Enter your First Name, Last Name, and National ID to begin. Each candidate is strictly allowed only one attempt.
+2. **Taking the Exam:** Use "Previous Question" / "Next Question" to navigate.
+3. **Completion:** End the exam early via "End Exam," or it auto-submits when the 33-minute timer expires.
+4. **Submission:** Results (Score, Correct Answers, Time Spent) display on screen. Send them privately to the instructor via Telegram by 20:00 on exam day.
+5. **Allowed Timeframe:** 08:00–20:00 on exam day.
+6. **Support:** Contact the center's education management for technical issues.
 
-questions.js: An array containing the 33 Django-related multiple-choice questions.
+## ⚖️ Legal & Copyright
 
-db.js: Handles data storage management.
+This software is designed strictly for educational purposes as part of the 
+center's learning management workflow.
 
-exam.js: The core logic of the application, including the timer, navigation, and final score calculation.
+All material and intellectual property rights belong to Kharazmi Educational Center.
 
-📋 Usage Instructions (For Students)
-Registration: Enter your First Name, Last Name, and National ID to begin. Please note that each candidate is strictly allowed only one attempt.
-
-Taking the Exam: Use the "Previous Question" and "Next Question" buttons to navigate through the assessment.
-
-Completion: You can choose to end the exam early by clicking the "End Exam" button. Otherwise, it will automatically submit when the 33-minute timer expires.
-
-Submission: Upon completion, your results (Score, Correct Answers, Time Spent) will be displayed on the screen. You must send these results privately to the instructor via Telegram by maximum 20:00 on the day of the exam.
-
-Allowed Timeframe: The valid window for participating in the exam and submitting results is strictly from 08:00 AM to 08:00 PM (20:00).
-
-Support: In case of any technical issues, please contact the center's education management.
-
-⚖️ Legal & Copyright
-This software is designed strictly for educational purposes.
-
-All material and intellectual property rights belong to the Kharazmi Educational Center.
-
-Last Updated: January 2025 (Dey 1403).
-
-Copyright: All rights reserved © 2025 (1403) Kharazmi Educational Center.
+Last Updated: January 2025 (Dey 1403)
+Copyright © 2025 (1403) Kharazmi Educational Center. All rights reserved.
